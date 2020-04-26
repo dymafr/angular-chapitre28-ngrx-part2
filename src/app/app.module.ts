@@ -11,6 +11,7 @@ import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router
 import { MyRouterStateSerializer } from './store/router.helper';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
+import { metaReducers } from './store/index';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { EffectsModule } from '@ngrx/effects';
         path: 'todo', loadChildren: () => import('src/app/todos/todos.module').then(m => m.TodosModule)
       },
     ]),
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router'
