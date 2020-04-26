@@ -1,5 +1,4 @@
-import { Action } from "@ngrx/store";
-import { Todo } from "../todo.model";
+import { Todo } from "../../todo.model";
 import * as todosAction from "./todos.actions";
 
 export interface TodoState {

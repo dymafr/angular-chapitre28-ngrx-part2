@@ -5,7 +5,7 @@ import { TodoState } from '../../store/todos.reducer';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Todo } from 'src/app/todo.model';
-import { todoListArraySelector, selectedTodoSelector } from 'src/app/store/todos.selectors';
+import { todoListArraySelector, selectedTodoSelector } from '../../store/todos.selectors';
 
 @Component({
   selector: 'app-todo-list',
